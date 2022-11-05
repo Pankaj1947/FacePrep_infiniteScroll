@@ -3,7 +3,7 @@
 # Functionality Implemented by me.
 1. It is an authenticated app with given username and password
 2. /home route is private and only available post login.
-3.Home page has logout button.
+3. Home page has logout button.
 4. Fake login is done by using an object.
 5. UI built using React only.
 6. Able to fetch data of users
