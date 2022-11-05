@@ -1,3 +1,35 @@
+# FacePred Assigment for Infinite Scrolling
+
+# Functionality Implemented by me.
+1. It is an authenticated app with given username and password
+2. /home route is private and only available post login.
+3.Home page has logout button.
+4. Fake login is done by using an object.
+5. UI built using React only.
+6. Able to fetch data of users
+8. Used the given API
+9. Showed loader when scrolling to end of page.
+10. Library used for implenting the infinite scroll: react-infinite-scroll-component
+
+Bonus:
+2. UI is decent looking and very much responsive also.
+3. Implemented loaders during loading.
+4. Added unit test but it was showing errors. so its not completed
+5. Written a neat well formatted code.
+6. Uses git only.
+
+# Instruction to run code
+
+1. Open the terminal
+2. npm i
+3. npm start
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
