@@ -6,6 +6,7 @@ import { AuthContext } from "../../context/AuthContext";
 import "./styles.css";
 
 export const Login = () => {
+  // React States
   const [errorMessages, setErrorMessages] = useState({});
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isAuth,toggleAuth]=useContext(AuthContext);

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext";
@@ -6,17 +6,21 @@ import { AuthContext } from "../../context/AuthContext";
 import "./styles.css";
 
 export const Home = () => {
-  const [users, setUsers] = React.useState([]);
-  const [isAuth, toggleAuth] = React.useContext(AuthContext);
-  const navigate=useNavigate();
+  const [users, setUsers] = useState([]); //users state
+  const [toggleAuth] = useContext(AuthContext); //Auth state
+  const navigate = useNavigate(); //navigate state
 
-  //https://randomuser.me/api/?page=1&results=10
+  //API: https://randomuser.me/api/?page=1&results=10
   useEffect(() => {
     getUserList();
   }, []);
 
   const pageNo = Math.ceil(users.length / 10) + 1;
+  //changing page number according to previous users data
+
   const url = `https://randomuser.me/api/?page=${pageNo}&results=10`;
+
+  //fetching user list from api
   const getUserList = () => {
     fetch(url)
       .then((res) => res.json())
@@ -25,7 +29,7 @@ export const Home = () => {
       })
       .catch((err) => console.log(err));
   };
-
+  //fetching more data for infinite scroll
   const fetchMoreData = () => {
     setTimeout(() => {
       getUserList();
@@ -38,7 +42,6 @@ export const Home = () => {
     alert("Logged Out");
     navigate("/");
   };
-
 
   return (
     <div>
