@@ -11,7 +11,7 @@
 9. Showed loader when scrolling to end of page.
 10. Library used for implenting the infinite scroll: react-infinite-scroll-component
 
-Bonus:
+# Bonus
 2. UI is decent looking and very much responsive also.
 3. Implemented loaders during loading.
 4. Added unit test but it was showing errors. so its not completed
