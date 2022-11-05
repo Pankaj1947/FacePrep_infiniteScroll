@@ -1,8 +1,8 @@
 .navbar {
   background-color: grey;
-  height: 80px;
+  height: auto;
+  border: 1px solid black;
   display: flex;
-  justify-content: center;
   align-items: center;
   font-size: 1.2rem;
   position: sticky;
@@ -13,10 +13,12 @@
 
 .nav-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  flex-wrap: wrap;
   align-items: center;
-  width: 95%;
-  height: 80px;
+  background-color: grey;
+  width: 100%;
+  height: auto;
 }
 
 .nav-logo {

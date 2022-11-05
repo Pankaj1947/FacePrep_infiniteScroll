@@ -1,0 +1,54 @@
+.mainContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 80%;
+  margin-top: 20px;
+  gap: 5%;
+  margin-left: 10%;
+}
+.container > div {
+  padding: 1%;
+  background-color: rgb(235, 228, 228);
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 10px;
+  line-height: 10px;
+  margin-bottom: 15px;
+}
+.container > div > img {
+  width: 300px;
+  height: 300px;
+}
+.heading {
+  display: grid;
+  justify-content: center;
+  text-align: center;
+  color: #f05136;
+}
+.heading > h1 {
+  border: 3px solid #f05136;
+  padding: 5px 35px;
+  border-radius: 5px;
+}
+.boxes {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: left;
+  align-items: center;
+  width: 100%;
+  gap: 5%;
+}
+.text{
+    color: #f05136;
+}
+.text span{
+    color: black;
+}
