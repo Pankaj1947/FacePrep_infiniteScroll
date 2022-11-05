@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext";
@@ -6,18 +6,18 @@ import { AuthContext } from "../../context/AuthContext";
 import "./styles.css";
 
 export const Home = () => {
-  const [users, setUsers] = useState([]); //users state
-  const [toggleAuth] = useContext(AuthContext); //Auth state
-  const navigate = useNavigate(); //navigate state
+  const [users, setUsers] = React.useState([]); //users state
+  const [isAuth, toggleAuth] = React.useContext(AuthContext); //Auth state
+  const navigate=useNavigate(); //navigate state
 
-  //API: https://randomuser.me/api/?page=1&results=10
-  useEffect(() => {
+    //API: https://randomuser.me/api/?page=1&results=10
+  useEffect(() => { 
     getUserList();
   }, []);
 
-  const pageNo = Math.ceil(users.length / 10) + 1;
+  const pageNo = Math.ceil(users.length / 10) + 1;  
   //changing page number according to previous users data
-
+  
   const url = `https://randomuser.me/api/?page=${pageNo}&results=10`;
 
   //fetching user list from api
