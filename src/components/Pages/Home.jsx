@@ -1,9 +1,11 @@
 import React, { useEffect } from "react";
 import InfiniteScroll from "react-infinite-scroll-component";
+
 import "./styles.css";
 
 export const Home = () => {
   const [users, setUsers] = React.useState([]);
+
   //https://randomuser.me/api/?page=1&results=10
   useEffect(() => {
     getUserList();
@@ -24,13 +26,16 @@ export const Home = () => {
   const fetchMoreData = () => {
     setTimeout(() => {
       getUserList();
-    }, 500);
+    }, 1000);
   };
 
   return (
     <div>
       <div className="heading">
         <h1>Infinite Scroll</h1>
+      </div>
+      <div className="logout">
+        <button>Logout</button>
       </div>
       <div className="mainContainer">
         <InfiniteScroll

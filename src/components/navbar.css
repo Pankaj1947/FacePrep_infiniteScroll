@@ -1,7 +1,6 @@
 .navbar {
   background-color: grey;
   height: auto;
-  border: 1px solid black;
   display: flex;
   align-items: center;
   font-size: 1.2rem;
@@ -24,7 +23,7 @@
 .nav-logo {
   color: #f5b921;
   align-items: center;
-  margin-left: 20px;
+  padding-left: 5%;
   cursor: pointer;
   text-decoration: none;
   font-size: 2rem;
@@ -40,7 +39,7 @@
 .nav-links {
   color: #fff;
   text-decoration: none;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 1.5rem;
   height: 100%;
   font-weight: 600;
   border-bottom: 3px solid transparent;
