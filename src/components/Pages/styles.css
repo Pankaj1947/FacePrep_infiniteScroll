@@ -46,35 +46,33 @@
   width: 100%;
   gap: 5%;
 }
-.text{
-    color: #f05136;
+.text {
+  color: #f05136;
 }
-.text span{
-    color: black;
-}
-
-.logout{
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    margin-top: -80px;
-    margin-bottom: 50px;
-    margin-right: 50px;
-}
-.logout button{
-    background-color: #f05136;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-}
-.logout button:hover{
-    background-color: #fc2b06;
+.text span {
+  color: black;
 }
 
-
+.logout {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  margin-top: -80px;
+  margin-bottom: 50px;
+  margin-right: 50px;
+}
+.logout button {
+  background-color: #f05136;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.logout button:hover {
+  background-color: #fc2b06;
+}
 
 /* Form CSS */
 .formContainer {
@@ -94,16 +92,19 @@ input[type="password"] {
 
 input[type="submit"] {
   margin-top: 10px;
-  cursor: pointer;
-  font-size: 15px;
-  background: #01d28e;
-  border: 1px solid #01d28e;
-  color: #fff;
+  margin-bottom: 10px;
+  background-color: #f05136;
+  font-size: 16px;
+  color: white;
+  border: none;
   padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 input[type="submit"]:hover {
-  background: #6cf0c2;
+  background-color: #ff2600;
 }
 
 .button-container {
@@ -112,7 +113,7 @@ input[type="submit"]:hover {
 }
 
 .login-form {
-  background-color: rgb(235, 228, 228);;
+  background-color: rgb(235, 228, 228);
   padding: 5px 25px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }

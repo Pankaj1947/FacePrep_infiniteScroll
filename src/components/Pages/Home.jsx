@@ -1,10 +1,14 @@
 import React, { useEffect } from "react";
 import InfiniteScroll from "react-infinite-scroll-component";
+import { useNavigate } from "react-router-dom";
+import { AuthContext } from "../../context/AuthContext";
 
 import "./styles.css";
 
 export const Home = () => {
   const [users, setUsers] = React.useState([]);
+  const [isAuth, toggleAuth] = React.useContext(AuthContext);
+  const navigate=useNavigate();
 
   //https://randomuser.me/api/?page=1&results=10
   useEffect(() => {
@@ -18,7 +22,6 @@ export const Home = () => {
       .then((res) => res.json())
       .then((data) => {
         setUsers([...users, ...data.results]);
-        console.log(data.results);
       })
       .catch((err) => console.log(err));
   };
@@ -29,13 +32,21 @@ export const Home = () => {
     }, 1000);
   };
 
+  //logout function
+  const logOut = () => {
+    toggleAuth();
+    alert("Logged Out");
+    navigate("/");
+  };
+
+
   return (
     <div>
       <div className="heading">
         <h1>Infinite Scroll</h1>
       </div>
       <div className="logout">
-        <button>Logout</button>
+        <button onClick={logOut}>Logout</button>
       </div>
       <div className="mainContainer">
         <InfiniteScroll
